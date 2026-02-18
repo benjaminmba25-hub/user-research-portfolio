@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usability Testing: Government Service | User Research Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        header .subtitle {
+            opacity: 0.9;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+        
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        main {
+            padding: 40px 0;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #1a365d;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .section h3 {
+            color: #2c5282;
+            font-size: 1.1rem;
+            margin: 25px 0 15px;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+        
+        .highlight-box {
+            background: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .critical-box {
+            background: #fff5f5;
+            border-left: 4px solid #c53030;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .success-box {
+            background: #f0fff4;
+            border-left: 4px solid #38a169;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .image-container {
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        th {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .success-rate {
+            font-weight: bold;
+        }
+        
+        .success-rate.high {
+            color: #38a169;
+        }
+        
+        .success-rate.medium {
+            color: #d69e2e;
+        }
+        
+        .success-rate.low {
+            color: #e53e3e;
+        }
+        
+        blockquote {
+            background: #f7fafc;
+            border-left: 4px solid #2c5282;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #4a5568;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            color: #4a5568;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .skill-tag {
+            background: #e2e8f0;
+            color: #2d3748;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
+        footer {
+            background: #1a365d;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        footer p {
+            opacity: 0.8;
+        }
+        
+        .metric-card {
+            background: #f7fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c5282;
+        }
+        
+        .metric-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Usability Testing: Government Service</h1>
+            <p class="subtitle">Evaluating a "report a change" prototype with users who have accessibility needs</p>
+            <a href="../" class="back-link">← Back to Portfolio</a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <!-- Overview -->
+            <section class="section">
+                <h2>Project Overview</h2>
+                
+                <div class="highlight-box">
+                    <strong>Research Question:</strong> Can users with accessibility needs successfully complete a Universal Credit "report a change" task using our redesigned prototype?
+                </div>
+                
+                <p><strong>Context:</strong> This usability testing project evaluates a redesigned digital service for reporting changes to Universal Credit circumstances. The prototype incorporates findings from discovery research and aims to be more accessible for users with diverse needs.</p>
+                
+                <p><strong>Approach:</strong> GDS-aligned usability testing with a focus on accessibility and inclusive design.</p>
+                
+                <p><strong>Timeline:</strong> 2-week testing sprint (simulated)</p>
+                
+                <div class="skills-list">
+                    <span class="skill-tag">Moderated Testing</span>
+                    <span class="skill-tag">Accessibility Testing</span>
+                    <span class="skill-tag">Assistive Technology</span>
+                    <span class="skill-tag">WCAG 2.1</span>
+                    <span class="skill-tag">SUS Scoring</span>
+                    <span class="skill-tag">Issue Prioritisation</span>
+                </div>
+            </section>
+            
+            <!-- Background -->
+            <section class="section">
+                <h2>Background</h2>
+                
+                <h3>Why This Matters</h3>
+                <p>From discovery research, we learned that:</p>
+                <ul>
+                    <li>40% of UC users need additional support</li>
+                    <li>Many struggle with digital services due to accessibility barriers</li>
+                    <li>Users with screen readers, motor impairments, and cognitive differences often have poor experiences</li>
+                    <li>WCAG compliance is the minimum; true inclusivity requires going further</li>
+                </ul>
+                
+                <h3>GDS Accessibility Requirements</h3>
+                <p>The Government Design Service requires all digital services to:</p>
+                <ul>
+                    <li>Meet WCAG 2.1 AA standards as a minimum</li>
+                    <li>Work with assistive technologies (screen readers, voice control, etc.)</li>
+                    <li>Be tested with users who have access needs</li>
+                    <li>Follow inclusive design principles</li>
+                </ul>
+                
+                <h3>Prototype Being Tested</h3>
+                <p>A redesigned "report a change" service that allows UC claimants to:</p>
+                <ol>
+                    <li>Select what type of change they need to report</li>
+                    <li>Provide details of the change</li>
+                    <li>Upload supporting evidence</li>
+                    <li>Review and submit</li>
+                    <li>Receive confirmation</li>
+                </ol>
+            </section>
+            
+            <!-- Methodology -->
+            <section class="section">
+                <h2>Research Methodology</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Purpose</th>
+                            <th>Participants</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Moderated usability testing</strong></td>
+                            <td>Observe task completion, identify issues</td>
+                            <td>8 participants</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cognitive walkthrough</strong></td>
+                            <td>Understand mental models and decision-making</td>
+                            <td>Integrated into sessions</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Accessibility testing</strong></td>
+                            <td>Evaluate with assistive technologies</td>
+                            <td>4 participants with access needs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>System Usability Scale (SUS)</strong></td>
+                            <td>Quantify overall usability</td>
+                            <td>All 8 participants</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Participant Profiles</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Participant</th>
+                            <th>Profile</th>
+                            <th>Access Needs</th>
+                            <th>Assistive Technology</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>P1</td>
+                            <td>34, visual impairment</td>
+                            <td>Blind</td>
+                            <td>Screen reader (JAWS)</td>
+                        </tr>
+                        <tr>
+                            <td>P2</td>
+                            <td>58, motor impairment</td>
+                            <td>Difficulty using mouse</td>
+                            <td>Keyboard only, voice control</td>
+                        </tr>
+                        <tr>
+                            <td>P3</td>
+                            <td>42, dyslexia</td>
+                            <td>Reading difficulties</td>
+                            <td>Text-to-speech, high contrast</td>
+                        </tr>
+                        <tr>
+                            <td>P4</td>
+                            <td>67, low digital confidence</td>
+                            <td>Anxiety, memory issues</td>
+                            <td>None (needs simple interface)</td>
+                        </tr>
+                        <tr>
+                            <td>P5</td>
+                            <td>29, deaf</td>
+                            <td>Hearing impairment</td>
+                            <td>None (visual focus)</td>
+                        </tr>
+                        <tr>
+                            <td>P6</td>
+                            <td>45, cognitive impairment</td>
+                            <td>Processing difficulties</td>
+                            <td>None (needs clear structure)</td>
+                        </tr>
+                        <tr>
+                            <td>P7</td>
+                            <td>52, colour blindness</td>
+                            <td>Visual distinction issues</td>
+                            <td>None (needs non-colour cues)</td>
+                        </tr>
+                        <tr>
+                            <td>P8</td>
+                            <td>38, no declared needs</td>
+                            <td>Control group</td>
+                            <td>Standard setup</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Results Summary -->
+            <section class="section">
+                <h2>Results Summary</h2>
+                
+                <div class="image-container">
+                    <img src="findings-summary.png" alt="Usability Test Findings Summary">
+                    <p class="image-caption">Summary of task completion rates, critical issues, and participant profiles</p>
+                </div>
+                
+                <h3>Task Completion Rates</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Completion Rate</th>
+                            <th>Average Time</th>
+                            <th>Issues Found</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Find "report a change"</td>
+                            <td class="success-rate high">88%</td>
+                            <td>45 seconds</td>
+                            <td>1 critical</td>
+                        </tr>
+                        <tr>
+                            <td>Complete change form</td>
+                            <td class="success-rate medium">75%</td>
+                            <td>4 minutes</td>
+                            <td>2 critical, 3 major</td>
+                        </tr>
+                        <tr>
+                            <td>Upload evidence</td>
+                            <td class="success-rate medium">63%</td>
+                            <td>3 minutes</td>
+                            <td>2 critical, 2 major</td>
+                        </tr>
+                        <tr>
+                            <td>Review and submit</td>
+                            <td class="success-rate high">100%</td>
+                            <td>1 minute</td>
+                            <td>1 minor</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="metric-card">
+                    <div class="metric-value">72/100</div>
+                    <div class="metric-label">Overall SUS Score (Above Average)</div>
+                </div>
+            </section>
+            
+            <!-- Critical Issues -->
+            <section class="section">
+                <h2>Critical Issues (Must Fix Before Release)</h2>
+                
+                <div class="critical-box">
+                    <h3>Issue 1: Screen Reader Users Cannot Access Key Links</h3>
+                    <p><strong>Severity:</strong> Critical | <strong>Impact:</strong> Screen reader users cannot start the task</p>
+                    <p>The "report a change" link was implemented as a <code>&lt;div&gt;</code> with JavaScript click handler. Screen readers did not announce it as interactive.</p>
+                    <blockquote>
+                        "I'm tabbing through but I can't find where to report a change. It says 'Manage your account' but I don't hear anything about reporting changes."
+                        <br><br>
+                        — P1 (JAWS user)
+                    </blockquote>
+                    <p><strong>WCAG Violation:</strong> 4.1.2 Name, Role, Value (Level A)</p>
+                    <p><strong>Recommendation:</strong> Change to proper <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element with proper ARIA labels.</p>
+                </div>
+                
+                <div class="critical-box">
+                    <h3>Issue 2: Error Messages Do Not Explain How to Fix</h3>
+                    <p><strong>Severity:</strong> Critical | <strong>Impact:</strong> Users don't know what to do when they make mistakes</p>
+                    <p>P4 entered an invalid date format. Error message said "Invalid date" with no guidance on correct format.</p>
+                    <blockquote>
+                        "It just says invalid. Invalid what? What should I put? I've tried everything I can think of."
+                        <br><br>
+                        — P4 (cognitive impairment)
+                    </blockquote>
+                    <p><strong>WCAG Violation:</strong> 3.3.1 Error Identification, 3.3.3 Error Suggestion</p>
+                    <p><strong>Recommendation:</strong> "Enter the date in this format: DD/MM/YYYY. For example: 15/06/2024"</p>
+                </div>
+                
+                <div class="critical-box">
+                    <h3>Issue 3: Evidence Upload Does Not Accept Alternative Formats</h3>
+                    <p><strong>Severity:</strong> Critical | <strong>Impact:</strong> Users without digital documents cannot complete the task</p>
+                    <p>P6 had a paper letter but no scanner. Service only accepted PDF, JPG, PNG with no alternative.</p>
+                    <blockquote>
+                        "I've got the letter right here, but I don't know how to get it on the computer. Can't I just tell you what's in it?"
+                        <br><br>
+                        — P6 (cognitive impairment)
+                    </blockquote>
+                    <p><strong>Recommendation:</strong> Add option to post evidence, request callback, or provide text description.</p>
+                </div>
+            </section>
+            
+            <!-- WCAG Compliance -->
+            <section class="section">
+                <h2>WCAG 2.1 AA Compliance Audit</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Criterion</th>
+                            <th>Status</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.1.1 Non-text Content</td>
+                            <td class="success-rate low">❌ Fail</td>
+                            <td>Upload icon has no alt text</td>
+                        </tr>
+                        <tr>
+                            <td>1.3.1 Info and Relationships</td>
+                            <td class="success-rate low">❌ Fail</td>
+                            <td>Progress steps not programmatically determined</td>
+                        </tr>
+                        <tr>
+                            <td>1.4.3 Contrast (Minimum)</td>
+                            <td class="success-rate high">✅ Pass</td>
+                            <td>All text meets 4.5:1 ratio</td>
+                        </tr>
+                        <tr>
+                            <td>2.1.1 Keyboard</td>
+                            <td class="success-rate low">❌ Fail</td>
+                            <td>"Report a change" not keyboard accessible</td>
+                        </tr>
+                        <tr>
+                            <td>2.4.3 Focus Order</td>
+                            <td class="success-rate high">✅ Pass</td>
+                            <td>Logical tab order</td>
+                        </tr>
+                        <tr>
+                            <td>3.3.1 Error Identification</td>
+                            <td class="success-rate low">❌ Fail</td>
+                            <td>Errors not clearly identified</td>
+                        </tr>
+                        <tr>
+                            <td>3.3.2 Labels or Instructions</td>
+                            <td class="success-rate high">✅ Pass</td>
+                            <td>Form fields have labels</td>
+                        </tr>
+                        <tr>
+                            <td>4.1.2 Name, Role, Value</td>
+                            <td class="success-rate low">❌ Fail</td>
+                            <td>Custom components lack ARIA</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="critical-box">
+                    <strong>Overall Compliance: 50% (4/8 criteria passed)</strong><br>
+                    Does not meet WCAG 2.1 AA standards. Critical issues must be resolved before release.
+                </div>
+            </section>
+            
+            <!-- Recommendations -->
+            <section class="section">
+                <h2>Recommendations Summary</h2>
+                
+                <h3>Before Beta Release (Must Do)</h3>
+                <ol>
+                    <li><strong>Fix keyboard/screen reader access</strong> — Change custom components to semantic HTML</li>
+                    <li><strong>Rewrite error messages</strong> — Provide specific guidance on how to fix errors</li>
+                    <li><strong>Add alternative evidence options</strong> — Support users who cannot upload files</li>
+                    <li><strong>Fix alt text and ARIA labels</strong> — Ensure all non-text content is accessible</li>
+                </ol>
+                
+                <h3>Before Live Release (Should Do)</h3>
+                <ol>
+                    <li><strong>Improve progress indicator</strong> — Show step names and estimated time</li>
+                    <li><strong>Simplify language</strong> — Reduce reading level to 9-11 years</li>
+                    <li><strong>Add confirmation details</strong> — Explain what happens next and when</li>
+                </ol>
+                
+                <h3>Nice to Have (Could Do)</h3>
+                <ol>
+                    <li><strong>Add inline help</strong> — Contextual guidance for complex questions</li>
+                    <li><strong>Save and return</strong> — Allow users to complete later</li>
+                    <li><strong>Video demonstration</strong> — Show how to upload evidence</li>
+                </ol>
+            </section>
+            
+            <!-- Reflection -->
+            <section class="section">
+                <h2>Reflection</h2>
+                
+                <h3>What I Learned</h3>
+                <ul>
+                    <li><strong>Accessibility is not a checklist</strong> — WCAG compliance is necessary but not sufficient; real user testing reveals issues automated tools miss</li>
+                    <li><strong>Assistive technology users are expert users</strong> — They know their tools well; when they struggle, it's the service that's broken</li>
+                    <li><strong>Error messages are critical</strong> — They can make or break the experience, especially for anxious users</li>
+                    <li><strong>Alternative paths matter</strong> — Not everyone can use the "standard" route; inclusive design means options</li>
+                </ul>
+                
+                <h3>Skills Demonstrated</h3>
+                <ul>
+                    <li>Usability testing planning — Designing a test with clear objectives and tasks</li>
+                    <li>Accessibility expertise — Testing with assistive technologies, WCAG knowledge</li>
+                    <li>Inclusive recruitment — Prioritising users with access needs</li>
+                    <li>Issue prioritisation — Using severity and impact to prioritise fixes</li>
+                    <li>Clear communication — Presenting findings in actionable formats</li>
+                    <li>GDS alignment — Following government usability testing standards</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 User Research Portfolio</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">This is a simulated usability testing project demonstrating user research skills and accessibility expertise.</p>
+        </div>
+    </footer>
+</body>
+</html>
