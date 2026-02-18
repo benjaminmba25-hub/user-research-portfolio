@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discovery Research: Universal Credit | User Research Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        header .subtitle {
+            opacity: 0.9;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+        
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        main {
+            padding: 40px 0;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #1a365d;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .section h3 {
+            color: #2c5282;
+            font-size: 1.1rem;
+            margin: 25px 0 15px;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+        
+        .highlight-box {
+            background: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .image-container {
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        th {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        blockquote {
+            background: #f7fafc;
+            border-left: 4px solid #2c5282;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #4a5568;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            color: #4a5568;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .skill-tag {
+            background: #e2e8f0;
+            color: #2d3748;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
+        footer {
+            background: #1a365d;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        footer p {
+            opacity: 0.8;
+        }
+        
+        code {
+            background: #f7fafc;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        
+        pre code {
+            background: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Discovery Research: Universal Credit</h1>
+            <p class="subtitle">Understanding the needs of vulnerable customers making a new Universal Credit claim</p>
+            <a href="../" class="back-link">← Back to Portfolio</a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <!-- Overview -->
+            <section class="section">
+                <h2>Project Overview</h2>
+                
+                <div class="highlight-box">
+                    <strong>Research Question:</strong> How might we improve the Universal Credit new claim experience for vulnerable users who need additional support?
+                </div>
+                
+                <p><strong>Context:</strong> This discovery research project explores the needs of vulnerable customers making a new Universal Credit claim. It is informed by DWP's Advanced Customer Support (ACS) programme and the challenges identified in their 2024-2025 service transformation work.</p>
+                
+                <p><strong>Approach:</strong> GDS-aligned discovery research using qualitative methods to understand user needs, contexts, and pain points.</p>
+                
+                <p><strong>Timeline:</strong> 6-week discovery phase (simulated)</p>
+                
+                <div class="skills-list">
+                    <span class="skill-tag">User Interviews</span>
+                    <span class="skill-tag">Contextual Inquiry</span>
+                    <span class="skill-tag">Diary Studies</span>
+                    <span class="skill-tag">Journey Mapping</span>
+                    <span class="skill-tag">Persona Development</span>
+                    <span class="skill-tag">GDS-Aligned</span>
+                </div>
+            </section>
+            
+            <!-- Background Research -->
+            <section class="section">
+                <h2>Background Research</h2>
+                
+                <h3>DWP's Advanced Customer Support (ACS) Programme</h3>
+                <p>Before conducting primary research, I reviewed publicly available information about DWP's services:</p>
+                <ul>
+                    <li>ACS supports customers with additional needs across all DWP services</li>
+                    <li>The Visiting Service helps those who cannot access services digitally</li>
+                    <li>AI is being used to identify vulnerable customers from correspondence</li>
+                    <li><strong>Key insight:</strong> 40% of Universal Credit claims require some form of additional support</li>
+                </ul>
+                
+                <h3>Key Challenges Identified</h3>
+                <ul>
+                    <li>Digital exclusion affects many vulnerable customers</li>
+                    <li>Customers often have to repeat their story multiple times</li>
+                    <li>Support needs are identified late in the process</li>
+                    <li>Limited flexibility in how customers can engage with services</li>
+                </ul>
+            </section>
+            
+            <!-- Research Objectives -->
+            <section class="section">
+                <h2>Research Objectives</h2>
+                <ol>
+                    <li>Understand the end-to-end experience of vulnerable users making a UC claim</li>
+                    <li>Identify pain points and barriers in the current journey</li>
+                    <li>Explore users' mental models, expectations, and emotional states</li>
+                    <li>Understand the context in which users interact with UC services</li>
+                    <li>Identify opportunities for service improvement</li>
+                </ol>
+            </section>
+            
+            <!-- Methodology -->
+            <section class="section">
+                <h2>Research Methodology</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Purpose</th>
+                            <th>Participants</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Semi-structured interviews</strong></td>
+                            <td>Deep understanding of individual experiences</td>
+                            <td>8 participants</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contextual inquiry</strong></td>
+                            <td>Observe real-world behaviour and environment</td>
+                            <td>3 participants</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Diary study</strong></td>
+                            <td>Capture experiences over time</td>
+                            <td>5 participants, 2 weeks</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stakeholder interviews</strong></td>
+                            <td>Understand organisational constraints</td>
+                            <td>4 DWP work coaches (simulated)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Participant Recruitment</h3>
+                <p><strong>Target user groups (based on DWP's vulnerable customer profiles):</strong></p>
+                <ul>
+                    <li>Users with mental health conditions (anxiety, depression)</li>
+                    <li>Users with physical disabilities or mobility issues</li>
+                    <li>Elderly users (65+) new to digital services</li>
+                    <li>Users with limited English proficiency</li>
+                    <li>Users experiencing homelessness or housing insecurity</li>
+                    <li>Users with learning disabilities</li>
+                </ul>
+                <p><strong>Total participants:</strong> 16 users + 4 stakeholders</p>
+            </section>
+            
+            <!-- Journey Map -->
+            <section class="section">
+                <h2>Service Journey Map</h2>
+                
+                <div class="image-container">
+                    <img src="journey-map.png" alt="Universal Credit New Claim Journey Map">
+                    <p class="image-caption">Current state journey showing pain points and emotional experience across five phases</p>
+                </div>
+                
+                <h3>Key Pain Points Identified</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Pain Point</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Awareness</td>
+                            <td>Difficult to understand eligibility</td>
+                            <td>Users uncertain if they qualify</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>Digital exclusion (40% need support)</td>
+                            <td>Many cannot complete online</td>
+                        </tr>
+                        <tr>
+                            <td>Verification</td>
+                            <td>Repeated storytelling</td>
+                            <td>Customer distress, inefficiency</td>
+                        </tr>
+                        <tr>
+                            <td>Waiting</td>
+                            <td>Unclear timelines</td>
+                            <td>Financial stress, anxiety</td>
+                        </tr>
+                        <tr>
+                            <td>Payment</td>
+                            <td>Unexpected deductions</td>
+                            <td>Confusion, hardship</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Persona -->
+            <section class="section">
+                <h2>User Persona: Margaret</h2>
+                
+                <div class="image-container">
+                    <img src="persona-margaret.png" alt="User Persona: Margaret">
+                    <p class="image-caption">Persona representing recently bereaved elderly users navigating UC for the first time</p>
+                </div>
+                
+                <h3>Key Insights from Persona Development</h3>
+                <ul>
+                    <li><strong>Context matters:</strong> Margaret is grieving while learning to manage finances</li>
+                    <li><strong>Confidence barrier:</strong> She feels she "should" know how to do this</li>
+                    <li><strong>Support needs:</strong> Patient guidance, written information, option to bring someone</li>
+                    <li><strong>Emotional state:</strong> Anxious about making mistakes, doesn't want to be a burden</li>
+                </ul>
+            </section>
+            
+            <!-- Key Findings -->
+            <section class="section">
+                <h2>Key Research Findings</h2>
+                
+                <h3>Finding 1: Digital Exclusion is Not Just About Access</h3>
+                <blockquote>
+                    "I've got a phone, yeah. But I don't trust myself to do important stuff on it. What if I press the wrong thing?"
+                    <br><br>
+                    — Participant 3, 58, anxiety
+                </blockquote>
+                <p><strong>Implication:</strong> Simply providing digital channels isn't enough. Users need confidence-building and clear error recovery.</p>
+                
+                <h3>Finding 2: The Emotional Burden of Repeated Storytelling</h3>
+                <blockquote>
+                    "I had to tell five different people that I'd just come out of hospital. Each time it felt like reliving it."
+                    <br><br>
+                    — Participant 7, 42, recent hospital discharge
+                </blockquote>
+                <p><strong>Implication:</strong> A single view of customer needs and circumstances is essential for vulnerable users.</p>
+                
+                <h3>Finding 3: Flexibility is About Control, Not Just Convenience</h3>
+                <blockquote>
+                    "Nobody told me I could have someone with me. I went on my own and panicked."
+                    <br><br>
+                    — Participant 5, 34, autism
+                </blockquote>
+                <p><strong>Implication:</strong> Services should proactively offer options, not wait for users to ask.</p>
+                
+                <h3>Finding 4: Early Identification of Support Needs Changes Everything</h3>
+                <p>Users whose vulnerability was identified early had significantly better experiences.</p>
+                <p><strong>Implication:</strong> Proactive identification of support needs should happen at first contact, not after problems emerge.</p>
+            </section>
+            
+            <!-- Recommendations -->
+            <section class="section">
+                <h2>Recommendations</h2>
+                
+                <h3>Priority 1: Early Vulnerability Identification (Must Have)</h3>
+                <p>Implement AI-assisted screening at first contact to identify users who may need additional support.</p>
+                
+                <h3>Priority 2: Single View of Support Needs (Must Have)</h3>
+                <p>Create a central record of user support needs that is accessible across all DWP services.</p>
+                
+                <h3>Priority 3: Flexible Engagement Options (Should Have)</h3>
+                <p>Offer genuine choice in how users engage with UC services—phone, video, face-to-face at multiple locations.</p>
+                
+                <h3>Priority 4: Trauma-Informed Communication (Should Have)</h3>
+                <p>Train all customer-facing staff in trauma-informed communication.</p>
+            </section>
+            
+            <!-- Reflection -->
+            <section class="section">
+                <h2>Reflection</h2>
+                
+                <h3>What I Learned</h3>
+                <ul>
+                    <li><strong>The complexity of vulnerability</strong> — It's not a single category but intersecting circumstances</li>
+                    <li><strong>The emotional dimension of services</strong> — Users aren't just "completing tasks"; they're navigating life challenges</li>
+                    <li><strong>The importance of flexibility</strong> — One size never fits all in government services</li>
+                    <li><strong>GDS principles in practice</strong> — Starting with user needs sounds simple but requires genuine commitment</li>
+                </ul>
+                
+                <h3>Skills Demonstrated</h3>
+                <ul>
+                    <li>Research planning — Designing a multi-method study with clear objectives</li>
+                    <li>Qualitative methods — Interviews, contextual inquiry, diary studies</li>
+                    <li>Analysis & synthesis — Thematic analysis, journey mapping, persona development</li>
+                    <li>Stakeholder engagement — Involving work coaches and service designers</li>
+                    <li>Communication — Clear, actionable findings and recommendations</li>
+                    <li>Ethical practice — Informed consent, trauma-informed approach</li>
+                    <li>GDS alignment — Following government user research standards</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 User Research Portfolio</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">This is a simulated discovery research project based on publicly available information about DWP services.</p>
+        </div>
+    </footer>
+</body>
+</html>
